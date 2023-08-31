@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- DOCTYPE le indica al navegador que vamos a trabajar con la version de html 5, que es la version más nueva -->
+<html lang="es">
+    <!-- lang es un atributo que le da un lenguaje a mi atributo, el en significa que está en inglés -->
+    <!-- en la línea 3 se abre la etiqueta y en la linea donde termina con html > se cierra -->
+    <!-- todos los documentos tienen una etiqueta html, y esta es la madre de todas las etiquetas -->
+    <!-- no usar el lang no arruina la función de la pag pero es una mala práctica -->
+<head>
+    <meta charset="UTF-8"/>
+    <!-- identación se refiere a los 4 espacios que quedan antes de escribir, que sirven para representar que éste es un hijo, una clase -->
+    <!-- la etiqueta meta no se cierra de la misma manera que por ej el html, esto es porque no le voy a pasar contenido adentro. Aporta meta informacion del contenido del documento, solo tiene una apertura y no un cierre -->
+    <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpage</title>
+</head>
+<body>
+ <!-- emet es un plugin para editores de código y nos proporcionara atajos para programar de mejor manera -->   
+ <h1>Encabezado principal</h1>
+ <!-- Encabezado: implementa 6 niveles de importancia desde h1(más importante) hasta h6 (menos importante)-->
+ <!--NUNCA lo usen para par estilos a textos, para ésto usaremos CSS  -->
+ <!-- la importancia de los encabezados radica en su uso para el motor de búsqueda, le va a dar más importancia a lo que está en h1 -->
+ <h2>Encabezado6</h2>
+ <h3>Encabezado5</h3>
+ <h4>Encabezado4</h4>
+ <h5>Encabezado3</h5>
+ <h6>Encabezado2</h6>
+ <!-- ctrl + alt + flecha: duplica el cursor, también se puede hacer con alt + apretar con el mouse-->
+ <hr> <!-- cambio de tema entre párrafos, de forma visual, puede ser respresentado como una linea horizontal, sin embargo, actualmente no lo vamos a utilizar, eusar estas lineas en un diseño es una mala practica-->
+ <h2>Otro tema</h2>
+ <h3>parrafos</h3>
+ <p><span style="color:blueviolet">Lorem ipsum dolor</span> sit amet consectetur <br> adipisicing elit. Maiores excepturi, animi minima natus iste harum, nobis ipsum vitae dolorum atque deleniti, obcaecati sequi vel consequatur iusto porro. Autem, sapiente tempora.</p>
+ <hr>
+ <h2>{link}</h2>
+ <h3>ancla</h3>
+ <a href="http://www.google.com">google</a><br>
+ <a target= "_blank" href="http://www.google.com">google en ventana aparte</a>
+ <!-- ancla: crea enlaces. su atributo target por defecto es "_self" (target _top y _parent se encuentran en desuso)-->
+ <hr>
+ <h2>{Formulario}</h2>
+ <form action="/Cyberform" method="GET"> 
+ <!-- el method post le hace un GET al servidor para que gestione este dato -->
+
+ <label for="nombre">Nombre</label><br>
+ <input type="text" id="nombre" value="max"
+ aria-placeholder="indica tu nombre"
+ required>
+    <br><br>
+    <label for="edad">Edad</label><br>
+ <input type="number" id="edad" name="edad" aria-placeholder="indica edad"
+ required>
+<br><br>
+<label for="email">email</label>
+ </input type="email" id="email" name="email"
+ aria-placeholder="indica tu mail"/>
+ <br><br>
+ <label for="password">Password</label>
+ 
+ </input type="password" id= "password" name="password" 
+ aria-placeholder="password"
+ />
+ <br><br>
+ <label for="texto">Texto</label>
+ <textarea name="texto" id="twxto" cols="30" rows="10" placeholder="ingresa tu comentario"></textarea>
+ <input type="submit" value="compalte">
+ <!-- input submit va a intractuar con el formulario -->
+ <!-- la informacion de este formulario va a ir a los servidores -->
+ <hr>
+ <h2>Imagen</h2>
+ <img src="public/EA2NlhrUwAEnKXq.jpeg" alt="momazo" height="300" width="250">
+</body>
+</html>
+<!-- dentro de html tenemos el atributo head y body, y sus hijos -->
+<!-- alt + shift + a : crea un espacio para comentar-->
+<!-- cuando queremos copiar un archivo con ! y enter lo hacemos -->
