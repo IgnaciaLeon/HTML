@@ -1,0 +1,11 @@
+SEO: es la optimizaron para los motores de búsqueda. Optimizar mi app para que estos motores entiendan mi búsqueda de mejor forma y me puedan posicionar de buena manera en los buscadores
+
+un ejemplo de eso es que casi nadie pasa a la segunda página de Google, de eso se trata el posicionamiento, aparecer dentro de las primeras búsquedas en internet
+
+Describir de mejor forma por ejemplo ponerle nombres descriptivos a las imágenes también ayuda a optimizar el SEO
+
+DOM: es la forma en la que el navegador interactúa con la página web
+
+No puede haber una sección dentro de una sección ni una sección dentro de un artículo
+
+Los id no deben repetirse, deben ser únicos.

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Meta: Declaración del tipo de documento e idioma para gestión de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- metadato para el ajuste de escala -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keyword" content="ésta pag trata de anime" />
+    <!-- metadato sobre que trata la pag -->
+    <meta name="author" content="Cohorte Cyberpunk" />
+    <!-- indica quien o quienes son los autores -->
+    <meta name="Copyright" content="© 2023 Nelson&CO" />
+    <!-- indica derechos de copyright, indica que todo el contenido de la página tiene copyright -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- otorga compatibilidad con microsoft edge -->
+
+    <!-- Configuración del título de la página (Importante para el SEO) -->
+    <title>Estructura HTML</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Inicio del cuerpo de la página -->
+  <body>
+    <header style="color: whitesmoke; background-color: rgb(227, 121, 138)">
+      <a href="index.html">
+        <img
+          src="public/Higurashi_no_Naku_Koro_ni_logo.svg.png"
+          alt="Logo Higurashi"
+          width="200"
+        />
+      </a>
+      <h1>Estructura de Documento HTML</h1>
+      <nav>
+        <ul>
+          <li class="myli"><a href="index.html">Introducción a HTML</a></li>
+
+          <li class="myli">
+            <a href="estructura.html">Estructura de un Documento HTML</a>
+          </li>
+
+          <li class="myli"><a href="introcss.html">Introducción a CSS</a></li>
+
+          <li class="myli"><a href="introjs.html">Introducción a JS</a></li>
+
+          <li class="myli"><a href="introdom.html">Introducción al DOM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Kirby</h2>
+        <article id="article-1">
+          <h3>Kirby Tragón</h3>
+          <img src="public/kirby_eating.gif" alt="Kirby" width="500" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            tempore laborum assumenda fugit
+          </p>
+        </article>
+        <article id="article-2">
+          <h3>Kirby Mimiendo</h3>
+          <img src="public/ksleeping.jpeg" alt="Kirby_mimiendo" width="500" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            tempore laborum assumenda fugitLorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Eligendi tempore laborum assumenda
+            fugit
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>&copy;Copyright Nelson&CO 2023</footer>
+    <script src="main.js"></script>
+  </body>
+</html>
+<!-- Ésta sintaxis: ul>li*3{Sub item} permite crear lo que está abajo: 
+    <ul>
+        <li>Sub item</li>
+        <li>Sub item</li>
+        <li>Sub item</li>
+    </ul>
+    -->

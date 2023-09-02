@@ -1,0 +1,23 @@
+.myli {
+  /*select class */
+  background-color: #f8d6e9;
+  color: rgba(246, 15, 65, 0.858);
+}
+header {
+  /*select elemento */
+  color: black;
+  background-color: rgb(124, 86, 37);
+}
+article {
+  /*select todos los articles 
+  color: brown;
+  background-color: aquamarine; */
+}
+#article-1 {
+  /*select id */
+  background-color: rgb(255, 240, 252);
+}
+#article-2 {
+  /*select id */
+  background-color: beige;
+}
