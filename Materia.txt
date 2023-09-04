@@ -9,3 +9,19 @@ DOM: es la forma en la que el navegador interactúa con la página web
 No puede haber una sección dentro de una sección ni una sección dentro de un artículo
 
 Los id no deben repetirse, deben ser únicos.
+CSS opera en forma de cascada, y si no operamos en ese orden puede suceder algo impredecible
+es importante por lo tanto que nuestra hoja de estilos vaya en head para que se cargue antes que el contenido.
+Podemos trabajar los estilos de 3 formas distintas: 
+La ventaja de usar el selector clase es que puedo seleccionar multiles elementos, a diferencia del id que solo deja seleccionar 1.
+
+Ventajas de HTML: es fácil de usar, su sintaxis en fácil y no es rígida. Es fácil de escalar (facilmente puedo agregar elementos).
+Desventajas: compatibilidad entre navegadores (los estilos se van a ver diferentes dependiendo del navegador, el navegador lo interpreta como quiere), es estático, no interactúa con el ususario (para eso se utiliza JS), el desarrollador debe mantenerse al día con las etiquetas, ya que van evolucionando siempre, funciones de seguridad (es facilmente hackeable).
+Ventajas CSS: su estructuras (separación en bloques) me permite hacer más fácil mi código, y me permite reutilizar mi hoja de estilos; es flexible (los diseños pueden ser adaptables fácilmente), es de fácil impresión.
+Desventajas: compatibilidad entre navegadores (gual que pasaba con HTML), curva de aprendizaje (no es difícil de aprender pero demora mucho en aprenderse porque tiene muchos elementos), complejidad de diseño avanzado.
+
+Modelo de cajas: cuando creemos un elemento lo va a crear según ese modelo. 
+
+Resumen Herrencia de colores : los colores de las letras pueden heredarse de sus padres, los colores del background no se van a heredar.
+
+Las hojas de estilos se cachean por el navegador (se guardan)
+

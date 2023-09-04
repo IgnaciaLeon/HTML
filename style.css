@@ -9,9 +9,9 @@ header {
   background-color: rgb(124, 86, 37);
 }
 article {
-  /*select todos los articles 
+  /*select todos los articles*/
   color: brown;
-  background-color: aquamarine; */
+  background-color: aquamarine;
 }
 #article-1 {
   /*select id */
@@ -20,4 +20,171 @@ article {
 #article-2 {
   /*select id */
   background-color: beige;
+}
+#myp {
+  color: blue;
+}
+.myp {
+  font-size: 24px;
+}
+.back {
+  background-color: brown;
+}
+.color-rojo-back-azul {
+  color: red;
+  background-color: blue;
+}
+/* Modelo de caja */
+
+.contenedor {
+  margin: 50px violet;
+  padding: 10px;
+  border: 5px solid red;
+  color: green;
+  background-color: violet;
+}
+.contenido {
+  background-color: aquamarine;
+}
+.contenedor-con-imagen {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  background-color: aqua;
+  background-image: url("/public/pekora_hololive.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  /* cover: ajusta la imagen al elemento */
+  /* position: para centrar la imagen */
+}
+.contenido-con-imagen {
+  background-color: white;
+}
+
+/* al estar la clase div "contenedor" conteniendo a la clase "contenido" los atributos como colores o demás van a estar dados en su totalidad por la clase que es contenida,ya que ésta ocupa la totalidad del espacio */
+/* padding: distancia que hay entre el contenedor y su borde, es dentro del elemento. 
+border: es el borde.
+Margin: distancia que va a tener entre el navegador y elemento, es fuera del eldel backround no se hereda, si no se define es transparente, pero el color de la letra si se hereda*/
+
+/* SELECTORES */
+/* selector por elemento: */
+span {
+  font-weight: bold;
+}
+/* Asignan los mismos estilos a elementos con nombres diferentes, esta regla afecta a todos los elementos <p> y <span> */
+p,
+span {
+  color: blueviolet;
+}
+/* Afecta sólo los elementos <p> que se encuentran dentro de la etiqueta <main>, ya sea contenido directo o indirecto  */
+/* relacion directa, usa el caracter > para referenciar a un elemento que es hijo directo de .contenedor-parrafo
+main p {
+  background-color: rgb(147, 224, 70);
+}
+/* relacion indirecta, para referenciar a un elemento que es hijo indirecto de .contenedor-parrafo (p se encunetra dentro de .contenedor-parrafo) */
+article > .contenedor-parrafo > p {
+  font-size: 25px;
+}
+/* este selector hace referencia a elementos que están precedidos por otros elementos; ambos deben estar al mismo nivel */
+
+p + h1 {
+  color: red;
+}
+
+/* selector global: se encarga de seleccionar todos los elementos */
+* {
+  box-sizing: content-box;
+} /* ésto se suele poner al comienzo de mi archivo css, lo que hace es ajusta lo que está en el box dándole una cantidad determinada de pixeles??*/
+
+.content-content-box > div {
+  background-color: burlywood;
+  width: 300px;
+  height: 10px;
+  margin: 300px;
+  border: 10px solid black;
+}
+
+/* Estilos más usados */
+/* Declara el tipo de letra que se usa para mostrar en un texto. Se pueden declarar múltiples valores separados por coma para ofrecer al navegador varias alternativas en caso de que alguna no se encuentre disponible */
+.container {
+  border-top: 1px solid black;
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serifs;
+}
+.container > .content > p {
+  background-color: white;
+  color: black;
+  font-size: 25px; /* Determina el tamaño de la fuente, puede estar incluído en px, en puntos (p), porcentajes (%), rem (en proporción al archivo entero), em (en relación al tamaño del objeto que lo envuelve?)*/
+  font-weight: bold; /* puedo utilizar bold, o valores desde el 100 hasta el 1000 */
+  font-style: oblique; /* normal(viene por defecto), italic, oblique */
+}
+.content > h3 {
+  background-color: aliceblue;
+  font: bold 30px Arial, sans-serif;
+  /* para declarar todos los atributos en una línea 1. declaro el ancho 2. tamaño 3.familia de la fuente. Es una buena práctica ya que escribo menos código */
+  text-align: center; /* permite valores left (por defecto), right, justify y center */
+  line-height: 60px; /* es la caja donde viene la letra, entre mayor el valor hay un salto de línea en el texto más grande */
+}
+/* cuando ponemos h1 hasta h6 adentro de un div, esto se empieza a desbordar */
+
+/* colores */
+
+.mydiv {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgb(
+    192,
+    72,
+    136
+  ); /* rgb: rojo, verde y azul, el valor máximo que puede tomar cada parametro es de 255 */
+}
+.div-in-mydiv {
+  height: 50px;
+  width: 50px;
+  border-color: 1px solid black;
+  background-color: rgba(246, 15, 65, 0.858);
+  /* el alpha de rgba vuelve translucido en fondo */
+}
+/* valores hexadecimales #, va de una escala desde el 0-9 y A-F */
+.div-in-mydiv-2 {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  background-color: #683636;
+}
+/* Tamaños */
+.div-in-mydiv-3 {
+  height: 50px;
+  width: 50px;
+  margin: 20px 20px 0px 0 px; /* va en sentido del reloj, o bien margin :20px 0; aquí funciona el primer valor para arriba y para abajo 20, luego para el lado der e izq 0;
+
+  border: 1px solid black;
+  background-color: #36684e;
+  */
+}
+.tamano {
+  margin: 100px 20px;
+  height: 400px;
+  width: 400px;
+  background-color: black;
+
+  .content {
+    height: 400px;
+    width: 200;
+  }
+}
+.tamano-hijo {
+  height: 25%;
+  width: 25%;
+  /* el porcentaje va en relación al elemento que lo contiene */
+  background-color: wheat;
+}
+.div-vh-vw {
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+  /* ésta es una estrategia para hacer que las cosas sean responsivas, pero no es recomendable */
 }
