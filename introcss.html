@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,69 +28,93 @@
     </header>
     <main>
       <section>
+        <!-- Content box -->
+        <article class="content-content-box"><div>Content Box</div></article>
         <article>
           <p>holi</p>
           <p class="myp back">Holi 1</p>
           <p class="myp">Holi 2</p>
           <p id="myp" class="myp">Holi 3</p>
-          <p class="myp color-rojo-back-azul">p con dos class</p>
+          <p class="myp color-rojo-back-azul">p con dos clases</p>
           <!-- no se recomienda trabajar css con dos clases, ya que no optimizamos nuestro trabajo ni ahorramos código -->
           <!-- Debemos probar una hoja de estilos en distintos navegadores para ver si funciona, se considera una buena practica -->
         </article>
       </section>
-      <h2>Estilos más usados</h2>
-      <article>
-        <div class="container">
-          <div class="content">
-            <p>Párrafo</p>
-            <h3>Este es un detalle</h3>
-            <div class="mydiv">
-              <div class="div-in-mydiv">
-                M
-                <div class="div-in-my-div-2"></div>
-                <div class="div-in-my-div-3"></div>
-                <div class="tamano">
-                  <div class="tamano-hijo">sss</div>
-                </div>
-                <div class="div-vh-vw">texto</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+      <!-- Estilo en línea, hoy en día no se trabaja de esta manera -->
       <section>
-        <!-- Content Box -->
-        <article class="content-content-box">
-          <div>Holangas</div>
-        </article>
         <article>
-          <!-- Estilo en línea, hoy en día no se trabaja de esta manera -->
           <div class="div-ejemplo-embebido" style="background-color: azure">
-            Holi
+            Holiiiii
           </div>
         </article>
 
-        <section>
-          <!-- EJEMPLO MODELO DE CAJA -->
-          <article>
-            <div class="contenedor-con-imagen">
-              <div class="contenido-con-imagen">Peko Peko</div>
+        <!-- EJEMPLO MODELO DE CAJA -->
+        <article>
+          <div class="contenedor">
+            <div class="contenido">Holi 4</div>
+          </div>
+        </article>
+        <!-- ejemplo modelo en caja con imagen -->
+        <article>
+          <div class="contenedor-con-imagen">
+            <div class="contenido-con-imagen">Peko Peko</div>
+          </div>
+        </article>
+        <!-- Selectores -->
+        <article class="content-contenedor-parrafo">
+          <div class="contenedor-parrafo">
+            <h1>Este es el título de el párrafo</h1>
+            <p>Este es un <span> párrafo </span></p>
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>Estilos más usados</h2>
+        <article>
+          <div class="container">
+            <div class="content">
+              <p>Párrafo</p>
+              <h3>Este es un detalle</h3>
+              <div class="mydiv">
+                <div class="div-in-mydiv"></div>
+                <div class="div-in-mydiv-2"></div>
+                <div class="div-in-mydiv-3"></div>
+              </div>
+              <div class="tamano">
+                <div class="tamano-hijo">sss</div>
+              </div>
+              <div class="div-vh-vw">100vh-100vw</div>
+              <div class="punto">100 pt</div>
+              <div class="div-rem">20 rem</div>
+              <div class="div-em">20 em</div>
+              <div class="_contenedor">
+                contenedor
+                <div class="_contenido">
+                  contenido
+                  <div class="_otrocontenido">otro contenido</div>
+                  <div class="contenido-grande">contenido muy grande</div>
+                </div>
+              </div>
+              <div class="contenedor-de-bordes">
+                <div class="borde-1"></div>
+                <div class="borde-2"></div>
+                <div class="borde-3"></div>
+                <div class="borde-4"></div>
+              </div>
+              <div class="borde-en-una-linea"></div>
             </div>
-          </article>
-          <!-- ejemplo modelo en caja con imagen -->
-          <article>
-            <div class="contenedor">
-              <div class="contenido">Holi</div>
-            </div>
-          </article>
-          <!-- Selectores -->
-          <article class="content-contenedor-parrafo">
-            <div class="contenedor-parrafo">
-              <h1>Este es el título de el párrafo</h1>
-              <p>Este es un <span> párrafo </span></p>
-            </div>
-          </article>
-        </section>
+          </div>
+        </article>
+      </section>
+      <section>
+        <article class="content-d-flex">
+          <h2>Display Flex</h2>
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </article>
       </section>
     </main>
     <footer></footer>

@@ -1,3 +1,14 @@
+/* selector global: se encarga de seleccionar todos los elementos */
+* {
+  box-sizing: content-box;
+} /* ésto se suele poner al comienzo de mi archivo css, lo que hace es ajusta lo que está en el box dándole una cantidad determinada de pixeles??*/
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
 .myli {
   /*select class */
   background-color: #f8d6e9;
@@ -7,6 +18,13 @@ header {
   /*select elemento */
   color: black;
   background-color: rgb(124, 86, 37);
+}
+.content-content-box > div {
+  background-color: burlywood;
+  width: 300px;
+  height: 10px;
+  margin: 300px;
+  border: 10px solid black;
 }
 article {
   /*select todos los articles*/
@@ -78,7 +96,7 @@ span {
   color: blueviolet;
 }
 /* Afecta sólo los elementos <p> que se encuentran dentro de la etiqueta <main>, ya sea contenido directo o indirecto  */
-/* relacion directa, usa el caracter > para referenciar a un elemento que es hijo directo de .contenedor-parrafo
+/* relacion directa, usa el caracter > para referenciar a un elemento que es hijo directo de .contenedor-parrafo */
 main p {
   background-color: rgb(147, 224, 70);
 }
@@ -92,19 +110,6 @@ p + h1 {
   color: red;
 }
 
-/* selector global: se encarga de seleccionar todos los elementos */
-* {
-  box-sizing: content-box;
-} /* ésto se suele poner al comienzo de mi archivo css, lo que hace es ajusta lo que está en el box dándole una cantidad determinada de pixeles??*/
-
-.content-content-box > div {
-  background-color: burlywood;
-  width: 300px;
-  height: 10px;
-  margin: 300px;
-  border: 10px solid black;
-}
-
 /* Estilos más usados */
 /* Declara el tipo de letra que se usa para mostrar en un texto. Se pueden declarar múltiples valores separados por coma para ofrecer al navegador varias alternativas en caso de que alguna no se encuentre disponible */
 .container {
@@ -114,7 +119,7 @@ p + h1 {
 }
 .container > .content > p {
   background-color: white;
-  color: black;
+  color: brown;
   font-size: 25px; /* Determina el tamaño de la fuente, puede estar incluído en px, en puntos (p), porcentajes (%), rem (en proporción al archivo entero), em (en relación al tamaño del objeto que lo envuelve?)*/
   font-weight: bold; /* puedo utilizar bold, o valores desde el 100 hasta el 1000 */
   font-style: oblique; /* normal(viene por defecto), italic, oblique */
@@ -155,6 +160,9 @@ p + h1 {
   border: 1px solid black;
   background-color: #683636;
 }
+.content {
+  font-size: 30px;
+}
 /* Tamaños */
 .div-in-mydiv-3 {
   height: 50px;
@@ -173,7 +181,7 @@ p + h1 {
 
   .content {
     height: 400px;
-    width: 200;
+    width: 200px;
   }
 }
 .tamano-hijo {
@@ -184,7 +192,102 @@ p + h1 {
 }
 .div-vh-vw {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 40px);
   background-color: blue;
   /* ésta es una estrategia para hacer que las cosas sean responsivas, pero no es recomendable */
+}
+/* ctrl + f para buscar un elemento en vs code. */
+/* vh: view height: se refiere a la altura de toda la pantalla en display y el vw es view width */
+
+.punto {
+  height: 100pt;
+  width: 100pt;
+  background-color: rebeccapurple;
+  color: aliceblue;
+}
+.div-rem {
+  height: 20rem;
+  width: 20rem;
+  background-color: chartreuse;
+}
+
+/* rem: tamaño del elemento en relación a la fuente de todo el html (documento) */
+.div-em {
+  height: 20em;
+  width: 20em;
+  background-color: rgb(28, 45, 12);
+}
+/* em: en relacion a la fuente del contenedor del padre */
+.contenedor {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+}
+.contenido {
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  max-height: 200px; /* el máximo de alto permitido*/
+  max-width: 200px; /* el máximo de ancho permitido */
+  overflow-y: auto; /* por defecto tiene un valor de auto, puede ser scroll, hidden, auto */
+  overflow-x: hidden;
+}
+._otrocontenido {
+  background-color: blue;
+  width: 150px;
+  height: 150px;
+}
+.contenido-grande {
+  height: 400px;
+  width: 400px;
+  background-color: chocolate;
+}
+.contenedor-de-bordes > div {
+  height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.borde-1 {
+  border-style: dashed !important;
+}
+.borde-2 {
+  border-style: double !important;
+}
+.borde-3 {
+  border-style: outset !important;
+}
+.borde-4 {
+  border-style: solid !important;
+}
+.borde-en-una-linea {
+  border: 1px solid red; /* tamaño linea (border with). 2ª estilo de borde, 3ªcolor */
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+}
+/* el border style no se rreescribe */
+/* !important no respeta el arreglo de cascada, fuerza a que se ejecute esa caracteristica en particular */
+
+/* Flex container: se afecta a sí mismo y a su contenido 
+
+Flex box: es un sistema de elemntos flexible donde los elementos html se adaptan y colocan automáticamnete siendo más fácil personalizarlos*/
+
+.flex-container {
+  /* el display siempre debe ir al comienzo, sirve para ordenar el contenido hacia el lado y no hacia abajo. El valor por defecto es display: block */ /* muy utilizado para el "sistema de grillas" que es para por ejemplo poner una foto de un producto y su precio abajo así como shein. Antiguamente se trabajaba como tabla o como float, pero hoy en día no se usa */
+  display: flex;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* Flex Item */
+.flex-container > div {
+  margin: 10px;
+  background-color: #007fff;
+  padding: 20px;
 }
