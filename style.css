@@ -28,8 +28,8 @@ header {
 }
 article {
   /*select todos los articles*/
-  color: brown;
-  background-color: aquamarine;
+  color: rgb(0, 0, 0);
+  background-color: rgb(247, 247, 247);
 }
 #article-1 {
   /*select id */
@@ -265,29 +265,157 @@ p + h1 {
 }
 .borde-en-una-linea {
   border: 1px solid red; /* tamaño linea (border with). 2ª estilo de borde, 3ªcolor */
-  border-radius: 50%;
+  border-radius: 50px;
   height: 100px;
   width: 100px;
   margin-top: 20px;
 }
-/* el border style no se rreescribe */
+/* el border style no se reescribe */
 /* !important no respeta el arreglo de cascada, fuerza a que se ejecute esa caracteristica en particular */
 
-/* Flex container: se afecta a sí mismo y a su contenido 
+/* Selector hijo */
+/* 
+Comportamiento de elementos hijos dentro de contenedores flex:
 
-Flex box: es un sistema de elemntos flexible donde los elementos html se adaptan y colocan automáticamnete siendo más fácil personalizarlos*/
+1- order: Especifica el orden del los elementos
+2- flex-grow: Determina cuanto crece el elemento relativo al resto de elementos que estan dentro del contenedor flex
 
-.flex-container {
-  /* el display siempre debe ir al comienzo, sirve para ordenar el contenido hacia el lado y no hacia abajo. El valor por defecto es display: block */ /* muy utilizado para el "sistema de grillas" que es para por ejemplo poner una foto de un producto y su precio abajo así como shein. Antiguamente se trabajaba como tabla o como float, pero hoy en día no se usa */
+ */
+.flex-container-2 {
   display: flex;
-  font-size: 20px;
+  flex-wrap: wrap;
+  align-content: space-around;
+  font-size: 30px;
+  border: 1px solid rgb(141, 219, 220);
+  padding: 10px;
+
+  height: 300px;
+}
+.flex-container-2 > div {
+  /* margin: 10px; */
+  background-color: #ca5f82;
+  padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+  height: 70px;
+}
+.flex-container-2 > div:nth-child(1) {
+  order: 3; /* para cambiar el orden */
+  flex-grow: 1;
+  background-color: rgb(234, 255, 0);
+}
+.flex-container-2 > div:nth-child(2) {
+  order: 1;
+  flex-grow: 5;
+  background-color: rgb(219, 84, 39);
+}
+
+.flex-container-2 > div:nth-child(3) {
+  order: 2;
+  flex-grow: 5;
+  background-color: rgb(221, 113, 17);
+}
+/* flex shrink: determina cunato se puede encoger un elemento en relación a los demás dentro de un contenedor flex */
+
+.flex-container-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
   border: 1px solid black;
   padding: 10px;
 }
 
-/* Flex Item */
-.flex-container > div {
+.flex-container-3 > div {
   margin: 10px;
-  background-color: #007fff;
+  background-color: #a96033;
+  color: #30251a;
   padding: 20px;
+  width: 100px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.flex-container-3 > div:nth-of-type(3) {
+  flex-basis: 200px;
+}
+
+/* flex-basic: determina una longitud especifica */
+
+/* Display grid: nos permitirá disponer elementos en 2 ejes distintos a diferencia de flex que nos ayuda a disponer elementos solo en 1 dimensión*/
+
+.container-grid {
+  display: grid;
+}
+
+.item {
+  background-color: rgb(190, 176, 141);
+  color: #391912;
+  padding: 20px;
+  font-size: 20px;
+  border: solid black;
+}
+.grid-columns {
+  grid-template-columns: 1fr 50% 1fr;
+  /* o bien puedo usarlo con la sintaxis: repeat(3, 1fr); el 3 es la cantidad de hijos que quiero abarcar y fr es la unidad de medida que se le va a aplicar a esos hijos(fr,%, px) */
+}
+.grid-rows-column {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+} /* esto quiere decir que tenemos una grilla que ordena los elementos de esta forma: 4x3, es decir, desplaza los elementos en un orden de 4 columnas y 3 filas */
+
+.primero {
+  grid-column-start: 1; /* desde donde comienza */
+  grid-column-end: 3;
+  /* aquí le estamos diciendo al elemento 1 que comience en la columna 1 y termine en la columna 3, y que abarque todo ese espacio */
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.estructura {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas:
+    "_header _header"
+    "_sidebar _main"
+    "_footer _footer";
+  grid-template-rows: 50px 1fr 80px;
+  grid-template-columns: 300px 1fr;
+}
+
+._header {
+  grid-area: _header;
+  background-color: #553e45;
+}
+._sidebar {
+  grid-area: _sidebar;
+  background-color: #b15272;
+}
+._main {
+  grid-area: _main;
+  background-color: #d58ea5;
+}
+._footer {
+  grid-area: _footer;
+  background-color: #dbb2bf;
+}
+/* trabajar con pixeles para grid es más cómodo ya que se va adaptando la unidad al espacio disponible (su definición es fracción de espacio disponible) */
+
+.responsive {
+  display: grid;
+  border: 1px solid cornflowerblue;
+  grid-template-columns: repeat(3, minmax(200px, 500px));
+  /* min max indica el mínimo y el máximo de pixeles que puede tener cada hijo */
+  padding: 15px;
+  gap: 15px;
+  /* antiguamente llamado grip-gap */
+}
+
+.responsive > div {
+  background-color: #5fbaca;
+  color: #b02151;
+  padding: 30px;
+  margin: 15px;
 }

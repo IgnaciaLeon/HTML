@@ -1,0 +1,52 @@
+Flexbox:
+Es un nuevo modelo de diseño en CSS.
+Podemos crear diseños con menos código.
+
+Order: nos perite alinear varios elementos en una sola línea.
+
+Flex box me da herramientas para complementar el diseño respondido de una app o pag web
+
+Reglas de flex box:
+
+1. flexbox necesita un padre y al menos un hijo
+
+Span: es una etiqueta en linea
+La anchura de los hijos va a depender de la cantidad de contenido que haya dentro de cada etiqueta, y la altura dependerá de la altura del contenedor.
+
+Para activar flexbox agregamos display:flex a mi código css
+
+2. El flex container tiene 2 ejes
+
+El primer eje es el horizontal, y el eje secundario es vertical. La definición de esos ejes determinará como se moverán los hijos dentro del contenedor.
+
+Flex direction: determina la orientación del eje principal, por defecto es row, que hace que los hijos se dispongan de manera horizontal (uno al lado del otro de izquierda a derecha), si lo cambiamos a columna los hijos se dispondrán de manera vertical (de arriba hacia abajo). La dirección se le va a modificar al padre, que es el que lleva la dirección de los elementos en su interior.
+
+3. Podemos modificar el eje principal con flex-direction
+
+4. Podemos permitir el salto de columnas con flex-wrap para que los hijos no se salgan del contenedor y vayan bajando a la siguiente línea o fila.
+
+5. Alineamos elementos en el eje principal con justificación-content.   Space between: va a distribuir los objetos de manera proporcional dentro del contenedor. el primero irá en el borde izquierdo del contenedor y el segundo en el borde derecho del contenedor, en el espacio restante se distribuirán de manera proporcional los elementos restantes.Space around: va a distribuir los objetos de manera equitativa dentro del contenedor, pero dándole un pequeño espacio proporcional a los costados.
+
+6. Alineamos elementos en el eje secundario con align-items.stretch: quiere decir que los hijos van a ocupar todo el espacio que el padre les proporcione dependiendo del eje. 
+
+7. Podemos alinear los elementos hijos de forma individual en el eje secundario con align-self, es como el align ítems pero para cada hijo en particular. Lo que hace es sobreecribir el valor que le hemos dado al padre.
+
+8. Los hijos flexibles ignoran propiedades como float, clear, vertical-align: estas son propiedades antiguas que se utilizaban para la misma función, lo ideal es siempre no utilizarlas y sólo utilizar flexbox. De todas maneras no permiten modificar el comportamiento de los hijos.
+
+9. Podemos modificar el tamaño de los hijos con flex-row, flex-shrink y flex-bases. Por defecto el tamaño de los hijos se define por el tamaño de su contenido. es una de las reglas más importantes y que más vamos a utilizar.
+
+Flex-grow: define el tamaño que crecerá un hijo, en relación a sus demás hermanos, cuando hay espacio disponible en el contenedor,  su valor por defecto es 0. Ejemplo de la pizza y su partición.
+
+Flex shrink: casi nunca se usa. Define el tamaño de reducción de un hijo en relación a sus ademas hermanos, cuando falte espacio en el contenedor. Por defecto es 1.
+
+Flex basis: define el tamaño inicial del hijo. Su valor por defecto es auto. Esto viene a reemplazar la propiedad width. Lo que hace esta función es resetear el tamaño de cada hijo sin considerar su contenido (dejando el 100% del espacio del contenedor disponible), y a partir de eso se le asigna un nuevo tamaño pero que es equitativo para todos los hijos.
+
+**recordar que el tamaño de cada hijo depende de la cantidad de contenido que tenga. 
+
+10. Podemos resumir todo con la propiedad flex. Ej
+flex: 0 1 100px;(el primer valor (0) corresponde a flex grow, el segundo valor (1) corresponde a flex-shrink, y el tercer valor (100px) a flex-basis).
+
+Esta propiedad también es definida como shakehand?.
+Hay casos en los que encontraremos: flex: 1 0px; (el primer valor hace referencia al flex-row y el segundo al flex-basis). o bien flex:1 (primer valor 1, segundo valor1, tercer valor 0, pero no se utiliza por compatibilidad con navegadores como explorer 10 que malinterpretan este código).
+
+11.Propiedad order: va de menor a mayor, parte desde el valor 0 por defecto.
